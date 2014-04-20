@@ -1,3 +1,4 @@
+encoding: utf-8
 markdown: rdiscount
 pygments: true
 plugins: ./_plugins
@@ -6,33 +7,29 @@ paginate: 8
 safe: false
 
 #站点基础配置
-title: iLotus
-subTitle: Just another Jekyll blog.
-description: 这是 PIZn 的又一个博客，它是基于 Jekyll 搭建起来的。在这里，不仅仅是用来快速记录工作，学习，生活的一点一滴的地方，更是 PIZn 对 Jekyll 的学习和使用的一次有意义的实践。
-url: http://localhost:4000
+title: 方治乾的博客
+subTitle: 方治乾的个人博客
+description: 方治乾的博客
+url: http://fangzhiqian.github.io
 feed: /atom.xml
 
 #菜单配置
 nav:
-  - text: 首页
+  - text:   Home
     url: /index.html
     icon: icon-home
     class: home
-  - text: 文章归档
+  - text:  Archives
     url: /archives.html
     icon: icon-reorder
     class: none
-  - text: 关于我
-    url: /contact.html
+  - text:   About me
+    url: /me.html
     icon: icon-envelope-alt
     class: none
-  - text: 联系我
-    url: http://www.zhanxin.info/contact.html
+  - text: Contact
+    url: /contact.html
     icon: icon-heart
-    class: none
-  - text: 博客源代码
-    url: https://github.com/pizn/iLotus
-    icon: icon-github
     class: none
 
 page:
@@ -47,4 +44,4 @@ page:
     last: false
 
 author:
-  name: PIZn
+  name: 方志乾
