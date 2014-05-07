@@ -1,69 +1,8 @@
-<!DOCTYPE html>
-<html id="J-html" class="">
-<head>
-    <meta charset="UTF-8" />
-    <title>
-        {% if page.title %}
-            {{ page.title }}
-        {% else %}
-            {{ site.title }}
-        {% endif %}
-    </title>
-    <meta name="generator" content="Jekyll" />
-    <meta name="author" content="{{ site.author.name }}" />
-    <meta name="description" content="{{ page.description }}" />
-    <meta name="keywords" content="{{ page.keywords | join: ',' }}" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" media="all" href="{{ site.url }}/static/style.css" />
-    <link rel="shortcut icon" href="{{ site.url }}/downloads/pastel_colors.ico" type="image/x-icon" />
-    <!--[if lt IE 9]>
-    <script src="{{ site.url }}/static/js/html5.js" type="text/javascript"></script>
-    <![endif]-->
-    <script src="{{ site.url }}/static/js/jquery.js" type="text/javascript"></script>
-</head>
-<body itemscope itemtype="http://schema.org/WebPage" class="home blog lotus index">
-    <nav class="lotus-nav">
-    <div class="profilepic">
-    <a href="/"><img src="{{ site.url }}/downloads/psb.jpg" class="myself" title="方志乾"></a>
-    </div>
-        <ul>
-            {% for link in site.nav %}
-            {% assign active = nil %}
-            {% assign homeClass = nil %}
-            {% if page.url == link.url%}
-              {% assign active = 'current' %}
-            {% endif %}
-            {% if link.class == 'home' %}
-                {% assign homeClass = 'home ' %}
-            {% endif %}
-            <li class="{{ homeClass }}{{ active }}">
-                <a href="{{ link.url }}" rel="bookmark" title="{{link.text}}">
-                    <i class="{{ link.icon }}"></i><em class='t_title'>{{link.text}}</em>
-                </a>
-                {{ indicator }}
-            </li>
-            {% endfor %}
-        </ul>
-    </nav>
-
-    {{ content }}
-
-<footer class="lotus-footer">
-	<p>Copyright © 2014–2018 {{ site.title }} All rights reserved. all around me are worn out faces</p>
-</footer>
-<script src="{{ site.url }}/static/js/jquery.scrollTo.js" type="text/javascript"></script>
-<script src="{{ site.url }}/static/js/iLotus.js" type="text/javascript"></script>
-</body>
-<script type="text/javascript">
-// 多说
-var duoshuoQuery = {short_name:"fangzhiqian"};
-    (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0] 
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-</script>
-</html>
+---
+theme :
+  name : Snail
+Snail :
+  about_path : /about.html
+---
+{% include JB/setup %}
+{% include themes/Snail/default.html %}
